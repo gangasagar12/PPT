@@ -1,96 +1,166 @@
-*{
-    margin :0;
+/* Global reset and base */
+* {
+    margin: 0;
     padding: 0;
-    font-family: 'poppins','sans-serif';
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-body{
-    background-color:#0ef;
-    color:#fff ;
-}
-.header{
-   position:fixed;
-   top: 0;
-   left :0;
-   width: 100%;
-   padding: 20px;
-   background: transparent;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   z-index: 100;
-}
-.logo{
-    position: relative;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    
-}
-.navber a{
-    display: inline-block;
-    font-size: 25px;
-    color:#fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-}
-.navber a:hover{
-    color: #0ef;
 
+/* Body style */
+body {
+    background-color: #081b29;  /* deep dark blue */
+    color: #fff;
 }
-.home {
-    position: relative;
-    width: 100%;  /* Changed from 100px to 100% */
-    height: 100vh;
+
+/* Header / Navbar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 70px 10% 0;
-    background: url('images/Purple%20illustrated%20Mountain%20desktop%20wallpaper.png') no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: black;
+    z-index: 100;
 }
-.home-content{
-    max-width: 600px;
 
+.logo {
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
 }
-.home-content h3{
-    font-size: 32px;
-    font-weight: 700;
+
+.navbar a {
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
 }
-.home-content h1{
-    font-size: 56px;
+
+.navbar a:hover {
+    color: #0ef;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10%;
+    height: 100vh;
+    background: #081b29;
+    font-size: 10px;
+}
+
+/* Profile image box on right */
+.home-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #0ef;
+    box-shadow: 0 0 30px #0ef, 0 0 60px #9900ff;
+    object-fit: cover;
+}
+
+/* Left Content */
+.home-content {
+    max-width: 600px;
+    flex: 1;
+}
+
+.home-content h3 {
+    font-size: 15px;
     font-weight: 700;
     margin: -3px 0;
-    
-}
-.home-content p{
-    font: size 20px;
 }
 
-.home-sci{
+.home-content h1 {
+    font-size: 20px;
+  display: flex;
+    font-weight: 700;
+    margin: -3px 0 20px;
+}
+
+.home-content span {
+    color: #0ef;
+}
+
+.home-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Social Icons */
+.home-sci {
+    margin: 30px 0;
+}
+
+.home-sci a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 40px;
     height: 40px;
-    background:transparent;
+    margin-right: 15px;
     border: 2px solid #0ef;
     border-radius: 50%;
-    font-size: 28px;
-    color:gray;
+    color: #0ef;
+    font-size: 15px;
     text-decoration: none;
-    margin: 30px 15px 30px,0;
-
-
+    transition: 0.3s;
 }
-.home-sci a:hover{
+
+.home-sci a:hover {
     background: #0ef;
-    color: black;
-    box-shadow: 0 0 20px;
-    
+    color: #000;
+    box-shadow: 0 0 20px #0ef;
+}
+
+/* Button */
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #000;
+    border-radius: 40px;
+    font-size: 16px;
+    color: aqua;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn-box:hover {
+    background: #0ef;
+    color: #000;
+    box-shadow: 0 0 20px #0ef;
+}
+
+/* Right Image */
+.home-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #0ef;
+    box-shadow: 0 0 30px #0ef, 0 0 60px #9900ff;
+    object-fit: cover;
 }
