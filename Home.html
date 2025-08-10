@@ -1,47 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="stylee.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ganga Sagar Joshi — Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="stylee.css" />
+
+  <!-- Boxicons & Fonts -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
+  <!-- Header -->
   <header class="header">
-    <a href="#" class ="logo">portfolio</a>
+    <a class="logo" href="#home">Ganga Sagar</a>
     <nav class="navbar">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Skill</a>
-        <a href="#">Portfolio</a>
-         <a href="#">Contact</a>
-
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
+    <button class="hamburger" aria-label="menu">
+      <i class="bx bx-menu"></i>
+    </button>
   </header>
-    <section class="home">
-        <div class="home-content">
-            <h3>Hello, It's me</h3>
-            <h1>Ganga Sagar Joshi</h1>
-            <h3>And I'am a <span class="text "></span></h3>
-            <p>
-                I'm an aspiring web developer with a strong interest in technology and problem-solving. 
-                <br> I focus on building practical projects using Python, web development tools, and exploring areas like Data Structures, DevOps, and AI. 
-                <br> I enjoy turning ideas into real-world solutions and continuously work on improving my skills to grow in the IT industry.
-            </p>
-            
-                <div class="home-sci">
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-instagram' ></i></a>
-                <a href="#"><i class='bx bxl-whatsapp' ></i></a>
-         
-                </div>
-                <a href="#" class="btn-box"></a>More about me</a> 
+
+  <!-- Home -->
+  <main>
+  <section class="home" id="home">
+    <div class="container home-inner">
+      <div class="home-left">
+        <h3 class="muted">Hello, It's me</h3>
+        <h1 class="name">Ganga Sagar Joshi</h1>
+        <h3 class="role">I'm a <span class="typed-text"></span></h3>
+        <p class="lead">
+          Aspiring web developer & ML enthusiast currently studying BCA at Kantipur City College.
+          I build practical projects using Python, web technologies and explore DSA, DevOps, and AI.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Hire Me</a>
+          <a class="btn btn-outline" href="#" download>Download CV</a>
         </div>
-        <!--  add this  -->
-          <div class="home-img">
-            <img src="images/backgroundimage.jpg" alt="my profile picture">
-          </div>
-    </section>
-    <script
-</body>
-</html>
+
+        <div class="social">
+          <a href="#" aria-label="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" aria-label="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" aria-label="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="home-right">
+        <div class="photo-wrap">
+          <!-- Replace src with your own photo path -->
+          <img src="images/backgroundimage.jpg" alt="Ganga Sagar Joshi" class="profile-photo" />
+          <div class="neon-ring"></div>
+          <div class="neon-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am a BCA student passionate about turning ideas into real-world solutions.
+            I enjoy backend & frontend development, machine learning experiments, and improving system reliability.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
