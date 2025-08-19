@@ -22,8 +22,8 @@
     <nav class="navbar">
       <a href="#home" class="nav-link active">Home</a>
       <a href="#about" class="nav-link">About</a>
-      <a href="#projects" class="nav-link">Projects</a>
       <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
       <a href="#contact" class="nav-link">Contact</a>
     </nav>
     <button class="hamburger" aria-label="menu">
@@ -33,7 +33,7 @@
 
   <!-- Home -->
   <main>
-  <section class="home" id="home">
+  <section class="home reveal" id="home">
     <div class="container home-inner">
       <div class="home-left">
         <h3 class="muted">Hello, It's me</h3>
@@ -46,7 +46,7 @@
 
         <div class="cta-row">
           <a class="btn btn-primary" href="#contact">Hire Me</a>
-          <a class="btn btn-outline" href="#" download>Download CV</a>
+          <a class="btn btn-outline" href="assets/cv.pdf" download>Download CV</a>
         </div>
 
         <div class="social">
@@ -58,7 +58,6 @@
 
       <div class="home-right">
         <div class="photo-wrap">
-          <!-- Replace src with your own photo path -->
           <img src="images/backgroundimage.jpg" alt="Ganga Sagar Joshi" class="profile-photo" />
           <div class="neon-ring"></div>
           <div class="neon-glow"></div>
@@ -68,67 +67,108 @@
   </section>
 
   <!-- About -->
-  <section class="about" id="about">
-    <div class="container">
-      <!--  to keep the image  -->
+  <section class="about reveal" id="about">
+    <div class="container about-content">
       <div class="about-img">
         <img src="images/profile.jpg" alt="Ganga Sagar Joshi">
-
       </div>
-     <div class="about-content">
-      <h3> My Inroduction</h3>
-      <h2> About Me</h2>
-          <p>
-              I’m Ganga Sagar Joshi, a passionate BCA student at Kantipur City College with skills in
-        Python, JavaScript, Django, AI, and DevOps. I love creating efficient solutions, exploring
-        AI-based applications, and working on real-world projects that make a difference.
+      <div class="text">
+        <h3>My Introduction</h3>
+        <h2>About Me</h2>
+        <p>
+          I’m Ganga Sagar Joshi, a passionate BCA student at Kantipur City College with skills in
+          Python, JavaScript, Django, AI, and DevOps. I love creating efficient solutions, exploring
+          AI-based applications, and working on real-world projects that make a difference.
+        </p>
+        <div class="about-me">
+          <p><strong>Name:</strong> Ganga Sagar Joshi</p>
+          <p><strong>Date of Birth:</strong> March 2, 2006</p>
+          <p><strong>Address:</strong> Kathmandu, Nepal</p>
+          <p><strong>Email:</strong> 
+            <a href="mailto:ganga15bca2024@kcc.edu.np">ganga15bca2024@kcc.edu.np</a>
           </p>
-          <div class="about-me">
-            <p><strong>Name:</strong>Ganga Sagar Joshi</p>
-            <p><strong> Date of birth:</strong> March 2, 2006</p>
-            <p> <strong> Address</strong>Kathnamdu,Nepal</p>
-            <p><strong>ganga15bca2024@kcc.edu.np</strong></p>
-            <p><strong>+977-9746332963</strong></p>
+          <p><strong>Phone:</strong> 
+            <a href="tel:+9779746332963">+977-9746332963</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills-section reveal" id="skills">
+    <div class="skills-container">
+      <h2 class="section-title">My <span>Skills</span></h2>
+      <p class="section-description">Here's a snapshot of my expertise in various technologies:</p>
+      
+      <div class="skills-grid">
+        <!-- HTML -->
+        <div class="skill-box">
+          <h3>HTML</h3>
+          <div class="progress-circle" data-percent="95">
+            <svg class="progress-ring">
+              <circle class="progress-ring-background" cx="70" cy="70" r="60"></circle>
+              <circle class="progress-ring-foreground" cx="70" cy="70" r="60"></circle>
+            </svg>
+            <span class="progress-text">95%</span>
+          </div>
+        </div>
+        
+        <!-- CSS -->
+        <div class="skill-box">
+          <h3>CSS</h3>
+          <div class="progress-circle" data-percent="80">
+            <svg class="progress-ring">
+              <circle class="progress-ring-background" cx="70" cy="70" r="60"></circle>
+              <circle class="progress-ring-foreground" cx="70" cy="70" r="60"></circle>
+            </svg>
+            <span class="progress-text">80%</span>
+          </div>
+        </div>
+        
+  
+
+        <!-- Python -->
+        <div class="skill-box">
+          <h3>Python</h3>
+          <div class="progress-circle" data-percent="90">
+            <svg class="progress-ring">
+              <circle class="progress-ring-background" cx="70" cy="70" r="60"></circle>
+              <circle class="progress-ring-foreground" cx="70" cy="70" r="60"></circle>
+            </svg>
+            <span class="progress-text">90%</span>
+          </div>
+        </div>
+
+        <!-- DSA -->
+        <div class="skill-box">
+          <h3>DSA</h3>
+          <div class="progress-circle" data-percent="75">
+            <svg class="progress-ring">
+              <circle class="progress-ring-background" cx="70" cy="70" r="60"></circle>
+              <circle class="progress-ring-foreground" cx="70" cy="70" r="60"></circle>
+            </svg>
+            <span class="progress-text">75%</span>
+          </div>
+        </div>
+
+        <!-- Pandas -->
+        <div class="skill-box">
+          <h3>Pandas</h3>
+          <div class="progress-circle" data-percent="65">
+            <svg class="progress-ring">
+              <circle class="progress-ring-background" cx="70" cy="70" r="60"></circle>
+              <circle class="progress-ring-foreground" cx="70" cy="70" r="60"></circle>
+            </svg>
+            <span class="progress-text">65%</span>
           </div>
         </div>
       </div>
-      <section class="skills-section">
-    <div class="skills-container">
-        <h2 class="section-title">My Skills</h2>
-        <p class="section-description">Here's a snapshot of my expertise in various technologies:</p>
-        <div class="skills-grid">
-            <div class="skill-box">
-                <h3>HTML</h3>
-                <div class="progress-circle" data-percent="95">
-                    <svg class="progress-ring">
-                        <circle class="progress-ring-background" cx="70" cy="70" r="60"></circle>
-                        <circle class="progress-ring-foreground" cx="70" cy="70" r="60"></circle>
-                    </svg>
-                    <span class="progress-text">60%</span>
-                </div>
-            </div>
-            <div class="skill-box">
-                <h3>CSS</h3>
-                <div class="progress-circle" data-percent="60">
-                    <svg class="progress-ring">
-                        <circle class="progress-ring-background" cx="70" cy="70" r="60"></circle>
-                        <circle class="progress-ring-foreground" cx="70" cy="70" r="60"></circle>
-                    </svg>
-                    <span class="progress-text">60%</span>
-                </div>
-            </div>
-            <div class="skill-box">
-                <h3>React</h3>
-                <div class="progress-circle" data-percent="60">
-                    <svg class="progress-ring">
-                        <circle class="progress-ring-background" cx="70" cy="70" r="60"></circle>
-                        <circle class="progress-ring-foreground" cx="70" cy="70" r="60"></circle>
-                    </svg>
-                    <span class="progress-text">60%</span>
-                </div>
-            </div>
-        </div>
     </div>
-</section>
-   
   </section>
+</main>
+
+<!-- Scripts -->
+<script src="main.js"></script>
+</body>
+</html>
