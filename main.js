@@ -1,93 +1,77 @@
-// ---------- Typed.js for role
-document.addEventListener('DOMContentLoaded', function () {
+// Typed.js initialization
+document.addEventListener("DOMContentLoaded", () => {
   new Typed(".typed-text", {
-    strings: ["Python Developer", "Web Developer", "AI Enthusiast"],
-    typeSpeed: 70,
+    strings: ["Web Developer", "Python Programmer", "ML Enthusiast", "DSA Learner"],
+    typeSpeed: 80,
     backSpeed: 50,
-    backDelay: 1000,
-    loop: true
+    backDelay: 1500,
+    loop: true,
   });
-
-  // ---------- Nav active on scroll
-  const links = document.querySelectorAll('.nav-link');
-  const sections = [...document.querySelectorAll('section[id]')];
-
-  function onScroll() {
-    const scrollY = window.pageYOffset;
-    sections.forEach(sec => {
-      const top = sec.offsetTop - 140;
-      const h = sec.offsetHeight;
-      const id = sec.getAttribute('id');
-      if (scrollY >= top && scrollY < top + h) {
-        links.forEach(l => l.classList.remove('active'));
-        const link = document.querySelector('.nav-link[href="#' + id + '"]');
-        if (link) link.classList.add('active');
-      }
-    });
-  }
-  window.addEventListener('scroll', onScroll);
-  onScroll();
-
-  // ---------- IntersectionObserver reveal
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(ent => {
-      if (ent.isIntersecting) {
-        ent.target.classList.add('visible');
-        // if you want one-time reveal uncomment:
-        // io.unobserve(ent.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // animate skill bars when skills section visible
-  const skillsSection = document.getElementById('skills');
-  if (skillsSection) {
-    const skillObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          document.querySelectorAll('.skill-bar span').forEach(span => {
-            const p = span.getAttribute('data-percent') || span.style.width;
-            span.style.width = p + '%';
-          });
-          skillObserver.disconnect();
-        }
-      });
-    }, { threshold: 0.18 });
-    skillObserver.observe(skillsSection);
-  }
-
-  // smooth scroll for nav links
-  document.querySelectorAll('.nav-link').forEach(a => {
-    a.addEventListener('click', (e) => {
-      e.preventDefault();
-      const id = a.getAttribute('href');
-      const el = document.querySelector(id);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
-  // mobile hamburger basic toggle (if you want to extend)
-  const hamburger = document.querySelector('.hamburger');
-  if (hamburger) {
-    hamburger.addEventListener('click', () => {
-      document.querySelector('.navbar').classList.toggle('open');
-    });
-  }
 });
 
+// Navbar Active Link on Scroll
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
 
-// for the adding the skills setting in here
-document.addEventListener('DOMContentLoaded', () => {
-    const circles = document.querySelectorAll('.progress-ring-foreground');
-    const radius = 60; // Corresponds to the 'r' attribute in SVG
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 100;
+    const sectionHeight = section.clientHeight;
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      current = section.getAttribute("id");
+    }
+  });
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});
+
+// Hamburger Menu
+const hamburger = document.querySelector(".hamburger");
+const navbar = document.querySelector(".navbar");
+
+hamburger.addEventListener("click", () => {
+  navbar.classList.toggle("active");
+});
+
+// Reveal on Scroll
+const reveals = document.querySelectorAll(".reveal");
+window.addEventListener("scroll", () => {
+  reveals.forEach((reveal) => {
+    const windowHeight = window.innerHeight;
+    const revealTop = reveal.getBoundingClientRect().top;
+    const revealPoint = 100;
+    if (revealTop < windowHeight - revealPoint) {
+      reveal.classList.add("active");
+    }
+  });
+});
+
+// Skills Progress Animation
+const circles = document.querySelectorAll(".progress-ring-foreground");
+const skillBoxes = document.querySelectorAll(".skill-box");
+
+function animateSkills() {
+  skillBoxes.forEach((box, index) => {
+    const circle = circles[index];
+    const percent = box.querySelector(".progress-circle").dataset.percent;
+    const radius = 60;
     const circumference = 2 * Math.PI * radius;
+    const offset = circumference - (percent / 100) * circumference;
+    circle.style.strokeDasharray = circumference;
+    circle.style.strokeDashoffset = offset;
+  });
+}
 
-    circles.forEach(circle => {
-        const percent = circle.closest('.progress-circle').getAttribute('data-percent');
-        const offset = circumference - (percent / 100) * circumference;
-        circle.style.strokeDasharray = circumference;
-        circle.style.strokeDashoffset = offset;
-    });
+window.addEventListener("scroll", () => {
+  const skillsSection = document.querySelector("#skills");
+  const skillsTop = skillsSection.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+  if (skillsTop < windowHeight - 100) {
+    animateSkills();
+  }
 });
